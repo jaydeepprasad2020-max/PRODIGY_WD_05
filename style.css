@@ -1,0 +1,789 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(circle at top left,
+            #1d4ed8 0%,
+            transparent 35%),
+        radial-gradient(circle at bottom right,
+            #7c3aed 0%,
+            transparent 35%),
+        #07111f;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+.container {
+    width: min(1100px, 92%);
+
+    margin: 0 auto;
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 100%;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid rgba(255,
+            255,
+            255,
+            0.08);
+
+    background: rgba(7,
+            17,
+            31,
+            0.75);
+
+    backdrop-filter: blur(15px);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.nav-container {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 1.5rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+.header-label {
+    font-size: 0.9rem;
+
+    color: #a8b5ca;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    padding: 80px 0 100px;
+
+    min-height: calc(100vh - 80px);
+}
+
+
+.hero-content {
+    max-width: 750px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+
+.eyebrow {
+    color: #60a5fa;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h2 {
+    font-size: clamp(2.5rem,
+            7vw,
+            5rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h2 span {
+    color: #60a5fa;
+}
+
+
+.hero-text {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #a8b5ca;
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-section {
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+
+.search-form {
+    display: flex;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+.search-input-wrapper {
+    flex: 1;
+
+    position: relative;
+}
+
+
+.search-icon {
+    position: absolute;
+
+    left: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 1rem;
+}
+
+
+.search-input-wrapper input {
+    width: 100%;
+
+    padding: 17px 18px 17px 50px;
+
+    border: 1px solid rgba(255,
+            255,
+            255,
+            0.12);
+
+    border-radius: 14px;
+
+    outline: none;
+
+    background: rgba(255,
+            255,
+            255,
+            0.07);
+
+    color: #ffffff;
+
+    transition: 0.3s;
+}
+
+
+.search-input-wrapper input::placeholder {
+    color: #7f8da3;
+}
+
+
+.search-input-wrapper input:focus {
+    border-color: #60a5fa;
+
+    background: rgba(255,
+            255,
+            255,
+            0.1);
+
+    box-shadow:
+        0 0 0 3px rgba(96,
+            165,
+            250,
+            0.12);
+}
+
+
+.search-btn {
+    border: none;
+
+    padding: 0 30px;
+
+    border-radius: 14px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        background 0.2s;
+}
+
+
+.search-btn:hover {
+    background: #3b82f6;
+
+    transform: translateY(-2px);
+}
+
+
+.location-btn {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 14px;
+
+    border: 1px solid rgba(255,
+            255,
+            255,
+            0.12);
+
+    border-radius: 14px;
+
+    background: rgba(255,
+            255,
+            255,
+            0.05);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.location-btn:hover {
+    background: rgba(255,
+            255,
+            255,
+            0.1);
+
+    border-color: #60a5fa;
+}
+
+
+.search-btn:disabled,
+.location-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+    min-height: 28px;
+
+    margin: 25px auto;
+
+    text-align: center;
+
+    color: #9fb0c7;
+
+    font-size: 0.95rem;
+}
+
+
+.status.error {
+    color: #fca5a5;
+}
+
+
+.status.success {
+    color: #86efac;
+}
+
+
+/* =========================================
+   WEATHER CARD
+========================================= */
+
+.weather-card {
+    max-width: 900px;
+
+    margin: 30px auto 0;
+
+    padding: 35px;
+
+    border: 1px solid rgba(255,
+            255,
+            255,
+            0.1);
+
+    border-radius: 25px;
+
+    background: rgba(255,
+            255,
+            255,
+            0.07);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 60px rgba(0,
+            0,
+            0,
+            0.25);
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.weather-location {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.location-label {
+    color: #60a5fa;
+
+    font-size: 0.75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.weather-location h3 {
+    margin-top: 5px;
+
+    font-size: 2rem;
+}
+
+
+#localTime {
+    color: #8fa1b8;
+
+    font-size: 0.9rem;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================
+   MAIN WEATHER
+========================================= */
+
+.main-weather {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 30px 0;
+
+    border-top: 1px solid rgba(255,
+            255,
+            255,
+            0.08);
+
+    border-bottom: 1px solid rgba(255,
+            255,
+            255,
+            0.08);
+}
+
+
+.weather-icon {
+    width: 130px;
+
+    height: 130px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(96,
+            165,
+            250,
+            0.1);
+
+    font-size: 4.5rem;
+}
+
+
+.temperature {
+    display: flex;
+
+    align-items: flex-start;
+}
+
+
+.temperature #temperature {
+    font-size: 5rem;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+}
+
+
+.degree {
+    font-size: 2rem;
+
+    color: #a8b5ca;
+
+    margin-top: 7px;
+
+    margin-left: 5px;
+}
+
+
+.weather-description {
+    color: #a8b5ca;
+
+    font-size: 1.1rem;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   WEATHER DETAILS
+========================================= */
+
+.weather-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+.weather-detail {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 17px;
+
+    border-radius: 15px;
+
+    background: rgba(255,
+            255,
+            255,
+            0.05);
+}
+
+
+.detail-icon {
+    font-size: 1.4rem;
+}
+
+
+.detail-label {
+    display: block;
+
+    color: #8292a9;
+
+    font-size: 0.75rem;
+
+    margin-bottom: 3px;
+}
+
+
+.weather-detail strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    padding: 30px 0;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,
+            255,
+            255,
+            0.08);
+
+    color: #718198;
+
+    font-size: 0.85rem;
+}
+
+
+.footer p+p {
+    margin-top: 5px;
+}
+
+
+.footer a {
+    color: #60a5fa;
+
+    text-decoration: none;
+}
+
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        padding-top: 60px;
+    }
+
+
+    .weather-details {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .weather-card {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 18px 0;
+    }
+
+
+    .header-label {
+        font-size: 0.75rem;
+    }
+
+
+    .hero {
+        padding:
+            50px 0 70px;
+    }
+
+
+    .hero h2 {
+        font-size: 2.7rem;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .hero-text {
+        font-size: 0.95rem;
+    }
+
+
+    .search-form {
+        flex-direction: column;
+    }
+
+
+    .search-btn {
+        padding: 15px;
+    }
+
+
+    .weather-card {
+        padding: 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .weather-location h3 {
+        font-size: 1.5rem;
+    }
+
+
+    .main-weather {
+        gap: 15px;
+    }
+
+
+    .weather-icon {
+        width: 90px;
+
+        height: 90px;
+
+        font-size: 3rem;
+
+        flex-shrink: 0;
+    }
+
+
+    .temperature #temperature {
+        font-size: 3.8rem;
+
+        letter-spacing: -3px;
+    }
+
+
+    .degree {
+        font-size: 1.4rem;
+    }
+
+
+    .weather-description {
+        font-size: 0.95rem;
+    }
+
+
+    .weather-details {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .weather-detail {
+        padding: 14px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        width: 90%;
+    }
+
+
+    .hero h2 {
+        font-size: 2.3rem;
+    }
+
+
+    .main-weather {
+        align-items: flex-start;
+    }
+
+
+    .weather-icon {
+        width: 75px;
+
+        height: 75px;
+
+        font-size: 2.5rem;
+    }
+
+
+    .temperature #temperature {
+        font-size: 3rem;
+    }
+
+}
