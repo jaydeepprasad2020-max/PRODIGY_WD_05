@@ -8,7 +8,7 @@ The application allows users to search for weather information by entering a loc
 
 ## 🚀 Live Demo
 
-[View Live Demo](YOUR_LIVE_DEMO_LINK)
+[View Live Demo](https://jaydeepprasad2020-max.github.io/PRODIGY_WD_05/)
 
 ---
 
